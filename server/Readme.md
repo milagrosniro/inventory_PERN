@@ -2,7 +2,7 @@
 
 ## Overview
 
-**InventoryAPI Server** is a backend API built to manage inventory operations efficiently, using modern web technologies. Developed with **TypeScript** and based on the **PERN stack** (PostgreSQL, Express, React, and Node.js), the project offers a robust API with extensive documentation via **Swagger**, and includes unit and integration tests implemented with **Jest** and **Supertest**.
+**InventoryAPI Server** is a backend API built to manage inventory operations efficiently, using modern web technologies. Developed with #TypeScript and based on the **PERN stack** (PostgreSQL, Express, React, and Node.js), the project offers a robust API with extensive documentation via **Swagger**, and includes unit and integration tests implemented with **Jest** and **Supertest**.
 
 This project highlights backend skills in handling databases, testing, API development, and TypeScript-driven development.
 
@@ -42,40 +42,40 @@ Follow these steps to set up the project locally:
 ```bash
 
 npx sequelize-cli db:migrate
-Start the development server:
 ```
+Start the development server:
 
 ```bash
 
 npm run dev
+```
 Running Tests
 This project includes unit and integration tests using Jest and Supertest to ensure API reliability.
-```
 
 To run all tests:
 
 ```bash
 
 npm run test
-To run tests with coverage:
 ```
+To run tests with coverage:
 ```bash
 
 npm run test:coverage
+```
 Test coverage includes:
 
 API route handlers
 Database operations
 Business logic
 API Documentation
-```
 The API is fully documented using Swagger. Once the server is running, you can access the documentation at:
 
 ```bash
 
 http://localhost:4000/docs/
-The Swagger interface provides a detailed overview of all available endpoints, including request formats, parameters, and response structures.
 ```
+The Swagger interface provides a detailed overview of all available endpoints, including request formats, parameters, and response structures.
 **Project Structure**
 Here’s an overview of the project’s structure:
 
@@ -100,22 +100,22 @@ Development Mode:
 ```bash
 
 npm run dev
-Starts the server using Nodemon and ts-node for live-reload during development.
 ```
+Starts the server using Nodemon and ts-node for live-reload during development.
 
 Run Tests:
 
 ```bash
 
 npm run test
-Executes all tests using Jest and reports any issues.
 ```
+Executes all tests using Jest and reports any issues.
 Test with Coverage:
 
 ```bash
 
 npm run test:coverage
+```
 Runs tests and generates a coverage report.
 
 Database Clear: Automatically clears data from your PostgreSQL tables after tests.
-```
