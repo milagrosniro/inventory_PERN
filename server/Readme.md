@@ -32,31 +32,34 @@ Follow these steps to set up the project locally:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/InventoryAPI.git
+   git clone https://github.com/milagrosniro/inventory_PERN.git
    cd InventoryAPI
+   ```
 
-   Install dependencies:
+   **Install dependencies**:
 
 
-bash
+```bash
 
 npx sequelize-cli db:migrate
 Start the development server:
+```
 
-bash
+```bash
 
 npm run dev
 Running Tests
 This project includes unit and integration tests using Jest and Supertest to ensure API reliability.
+```
 
 To run all tests:
 
-bash
+```bash
 
 npm run test
 To run tests with coverage:
-
-bash
+```
+```bash
 
 npm run test:coverage
 Test coverage includes:
@@ -65,17 +68,18 @@ API route handlers
 Database operations
 Business logic
 API Documentation
+```
 The API is fully documented using Swagger. Once the server is running, you can access the documentation at:
 
-bash
+```bash
 
 http://localhost:4000/docs/
 The Swagger interface provides a detailed overview of all available endpoints, including request formats, parameters, and response structures.
-
-Project Structure
+```
+**Project Structure**
 Here’s an overview of the project’s structure:
 
-bash
+```bash
 
 InventoryAPI/server
 │
@@ -88,27 +92,30 @@ InventoryAPI/server
 ├── __tests__/          # Unit and integration tests
 ├── .env                # Environment variables
 └── package.json        # Project metadata and dependencies
+```
 
 Scripts Available
 Development Mode:
 
-bash
+```bash
 
 npm run dev
 Starts the server using Nodemon and ts-node for live-reload during development.
+```
 
 Run Tests:
 
-bash
+```bash
 
 npm run test
 Executes all tests using Jest and reports any issues.
-
+```
 Test with Coverage:
 
-bash
+```bash
 
 npm run test:coverage
 Runs tests and generates a coverage report.
 
 Database Clear: Automatically clears data from your PostgreSQL tables after tests.
+```
