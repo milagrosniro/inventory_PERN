@@ -1,6 +1,6 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { ActionFunctionArgs, Link, useLoaderData } from "react-router-dom";
 import ProductDetails from "../../components/ProductDetails";
-import { getProducts } from "../../services/ProductService";
+import { getProducts, updateProductAvailability } from "../../services/ProductService";
 import { Product } from "../NewProduct/new_product.types";
 
 //se carga antes del componente
@@ -8,6 +8,13 @@ export const loader = async () => {
   const products = await getProducts();
   return products;
 };
+
+export const action = async ({request}: ActionFunctionArgs) =>{
+  const data = Object.fromEntries(await request.formData())
+  const {id} = data
+  await updateProductAvailability({id})
+  return {}
+}
 
 const Products = () => {
   const products = useLoaderData() as Product[];

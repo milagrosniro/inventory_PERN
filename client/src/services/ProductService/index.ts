@@ -11,6 +11,7 @@ import {
   IDeleteProductByIdArgs,
   IGetProductByIdArgs,
   IUpdateProductArgs,
+  IUpdateProductAvailabilityArgs,
 } from "./productService.types";
 
 export const addProduct = async ({ data }: IAddProductArgs) => {
@@ -84,14 +85,19 @@ export const updateProduct = async ({ data, id }: IUpdateProductArgs) => {
 export const deleteProductById = async ({ id }: IDeleteProductByIdArgs) => {
   try {
     const url = `${import.meta.env.VITE_API_URL}api/products/${id}`;
-    const { data } = await axios.delete(url);
-    console.log(data)
-    // const result = safeParse(ProductSchema, data.data);
-    // if (!result.success) throw new Error("Invalid Data");
-    // if (result.success) {
-    //   return result.output;
-    // }
+    await axios.delete(url);
+
   } catch (err) {
     console.log(err);
   }
 };
+
+export const updateProductAvailability = async ({id}: IUpdateProductAvailabilityArgs)=>{
+  try {
+    const url = `${import.meta.env.VITE_API_URL}api/products/${id}`;
+    await axios.patch(url);
+
+  } catch (err) {
+    console.log(err);
+  }
+}

@@ -19,3 +19,7 @@ export interface IUpdateProductArgs{
 export interface IDeleteProductByIdArgs{
     id: Product['id']
 }
+
+export interface IUpdateProductAvailabilityArgs{
+    id: any
+}
